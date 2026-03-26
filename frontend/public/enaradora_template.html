@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E나라도움 — 공모 신청서 템플릿 지원 시스템</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #537DC9;
+  --primary-dark: #3a5fa8;
+  --primary-deeper: #2b4a8a;
+  --primary-light: #e8eef9;
+  --primary-mid: #c2d2ef;
+  --accent: #f0a500;
+  --accent-light: #fff8e6;
+  --bg: #f4f6fb;
+  --bg-white: #ffffff;
+  --text: #1a2035;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --border: #dde3f0;
+  --success: #2e7d5c;
+  --success-light: #e8f5ee;
+  --warning: #c45c00;
+  --warning-light: #fff3e8;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow: 0 2px 12px rgba(83,125,201,0.10);
+  --shadow-lg: 0 8px 32px rgba(83,125,201,0.16);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ---- TOP HEADER ---- */
+.gov-top {
+  background: var(--primary-deeper);
+  color: rgba(255,255,255,0.75);
+  font-size: 11px;
+  padding: 5px 0;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.gov-top span { margin: 0 12px; }
+
+.main-header {
+  background: var(--bg-white);
+  border-bottom: 2px solid var(--primary);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: var(--shadow);
+}
+.header-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-emblem {
+  width: 38px; height: 38px;
+  background: var(--primary);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-emblem svg { width: 22px; height: 22px; fill: #fff; }
+.logo-text { line-height: 1.3; }
+.logo-text .main-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: -0.02em;
+}
+.logo-text .sub-name {
+  font-size: 10px;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.header-nav a {
+  font-size: 13px;
+  color: var(--text-mid);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+  padding-bottom: 2px;
+}
+.header-nav a:hover { color: var(--primary); }
+.header-nav a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+.header-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s;
+}
+.header-btn:hover { background: var(--primary-dark); }
+
+/* ---- HERO ---- */
+.hero {
+  background: linear-gradient(135deg, var(--primary-deeper) 0%, var(--primary) 60%, #6a96d8 100%);
+  padding: 56px 24px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  right: 80px; bottom: -80px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+.hero-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+.hero-badge::before {
+  content: '●';
+  color: #7fff9a;
+  font-size: 8px;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #ffd97a;
+  font-family: 'Noto Serif KR', serif;
+}
+.hero-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  max-width: 540px;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: left;
+}
+.hero-stat .num {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+.hero-stat .num span { font-size: 14px; font-weight: 400; margin-left: 2px; color: rgba(255,255,255,0.7); }
+.hero-stat .lbl {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 2px;
+}
+
+/* ---- MAIN CONTENT ---- */
+.content-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 36px 24px 60px;
+}
+
+/* ---- SEARCH SECTION ---- */
+.search-section {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+}
+.form-select, .form-input {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23718096' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+.form-select:focus, .form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+}
+.search-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s, transform .1s;
+  display: flex; align-items: center; gap: 7px;
+}
+.search-btn:hover { background: var(--primary-dark); }
+.search-btn:active { transform: scale(0.98); }
+
+/* ---- FILTER TABS ---- */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--text-mid);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .2s;
+}
+.filter-tab:hover { border-color: var(--primary); color: var(--primary); }
+.filter-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.result-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-light);
+}
+.result-count strong { color: var(--primary); }
+
+/* ---- TEMPLATE CARDS ---- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.tpl-card {
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, transform .15s;
+  display: flex;
+  flex-direction: column;
+}
+.tpl-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+.tpl-card.featured {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(83,125,201,0.18);
+}
+
+.card-header {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.card-icon {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.card-meta { flex: 1; min-width: 0; }
+.card-ministry {
+  font-size: 10px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.featured-badge {
+  background: var(--primary);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.card-body { padding: 14px 18px; flex: 1; }
+.card-desc {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+.tag.green { background: var(--success-light); color: var(--success); }
+.tag.amber { background: var(--warning-light); color: var(--warning); }
+
+.card-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+.metric-box {
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 7px 8px;
+  text-align: center;
+}
+.metric-box .val {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+.metric-box .lbl {
+  font-size: 9px;
+  color: var(--text-light);
+  margin-top: 1px;
+}
+
+.card-footer {
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+}
+.btn-outline {
+  flex: 1;
+  padding: 8px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .2s;
+  text-align: center;
+}
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+.btn-primary-sm {
+  flex: 1;
+  padding: 8px;
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s;
+  text-align: center;
+}
+.btn-primary-sm:hover { background: var(--primary-dark); }
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(20,35,70,0.55);
+  z-index: 200;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 820px;
+  box-shadow: 0 24px 80px rgba(30,50,120,0.22);
+  overflow: hidden;
+  animation: slideUp .25s ease;
+  margin: auto;
+}
+@keyframes slideUp {
+  from { opacity:0; transform: translateY(20px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.modal-header {
+  background: linear-gradient(120deg, var(--primary-deeper), var(--primary));
+  padding: 24px 28px;
+  position: relative;
+}
+.modal-badge {
+  font-size: 10px;
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  padding: 3px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.modal-subtitle { font-size: 12px; color: rgba(255,255,255,0.72); }
+.modal-close {
+  position: absolute; top: 16px; right: 18px;
+  background: rgba(255,255,255,0.18); border: none; border-radius: 6px;
+  width: 30px; height: 30px; cursor: pointer; font-size: 16px; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.32); }
+
+.modal-body { padding: 28px; }
+
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.info-item {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.info-item .i-val {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+.info-item .i-lbl {
+  font-size: 10px;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.template-section {
+  margin-bottom: 22px;
+}
+.tpl-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--primary-light);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.tpl-section-title .num {
+  width: 22px; height: 22px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tpl-field {
+  margin-bottom: 12px;
+}
+.tpl-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.required-mark { color: #e53e3e; }
+.tpl-field-input {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+  background: #fafbff;
+  resize: vertical;
+  transition: border-color .2s;
+  line-height: 1.6;
+}
+.tpl-field-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+}
+.tpl-field-hint {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-top: 3px;
+  padding-left: 2px;
+}
+
+.tip-box {
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--primary-deeper);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+.tip-box strong { font-weight: 700; }
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.score-table th {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+.score-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  vertical-align: top;
+}
+.score-table tr:last-child td { border-bottom: none; }
+.score-table tr:nth-child(even) td { background: var(--bg); }
+.score-pill {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.checklist {
+  list-style: none;
+  margin-bottom: 16px;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 12px;
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.55;
+}
+.checklist li:last-child { border-bottom: none; }
+.check-icon {
+  width: 16px; height: 16px;
+  border-radius: 3px;
+  background: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 9px;
+  color: #fff;
+}
+
+.modal-footer {
+  padding: 18px 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  background: var(--bg);
+}
+.btn-lg {
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-lg.outline {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  color: var(--text-mid);
+}
+.btn-lg.outline:hover { border-color: var(--primary); color: var(--primary); }
+.btn-lg.solid {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+}
+.btn-lg.solid:hover { background: var(--primary-dark); }
+.btn-lg.accent {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+}
+.btn-lg.accent:hover { background: #d4920a; }
+
+/* ---- GUIDE SECTION ---- */
+.guide-section {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-top: 12px;
+  box-shadow: var(--shadow);
+}
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+.guide-step {
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  position: relative;
+}
+.guide-step::after {
+  content: '→';
+  position: absolute;
+  right: -13px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-mid);
+  font-size: 16px;
+}
+.guide-step:last-child::after { display: none; }
+.step-num {
+  width: 32px; height: 32px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  margin: 0 auto 8px;
+}
+.step-icon { font-size: 22px; margin-bottom: 6px; }
+.step-title { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.step-desc { font-size: 11px; color: var(--text-light); line-height: 1.5; }
+
+/* ---- FOOTER ---- */
+.site-footer {
+  background: #1a2035;
+  color: rgba(255,255,255,0.55);
+  font-size: 11px;
+  padding: 24px;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 1.8;
+}
+.site-footer strong { color: rgba(255,255,255,0.8); }
+
+/* ---- TOAST ---- */
+.toast {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  background: #1a2035;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  animation: fadeIn .3s;
+}
+.toast.show { display: flex; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<div class="gov-top">
+  <span>대한민국 정부 공식 보조사업 지원 플랫폼</span>
+  <span>|</span>
+  <span>E나라도움 통합 연계 서비스</span>
+  <span>|</span>
+  <span>민원 문의: 1566-2015</span>
+</div>
+
+<header class="main-header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-emblem">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L20 8v8l-8 4-8-4V8l8-3.82z"/><path d="M12 7l-5 2.5V15l5 2.5 5-2.5V9.5L12 7zm0 2.2l3 1.5v3.6l-3 1.5-3-1.5V10.7l3-1.5z"/></svg>
+      </div>
+      <div class="logo-text">
+        <div class="main-name">E나라도움 템플릿</div>
+        <div class="sub-name">공모 신청서 지원 시스템 · DIGIFUND</div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="#" class="active">템플릿 찾기</a>
+      <a href="#">나의 신청</a>
+      <a href="#">선정 가이드</a>
+      <a href="#">공지사항</a>
+      <button class="header-btn">로그인</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">AI 기반 맞춤 템플릿 추천 서비스 BETA</div>
+    <h1>선정된 사업자의 노하우를<br><em>당신의 공모 신청서</em>로</h1>
+    <p class="hero-desc">
+      E나라도움 데이터 분석을 통해 선정 집단의 행동 패턴과 우수 사례를<br>
+      학습한 공모 신청서 템플릿을 제공합니다. 신규 사업자도 처음부터 준비하지 마세요.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">1,240<span>건+</span></div>
+        <div class="lbl">등록된 우수 템플릿</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">3<span>개 부처</span></div>
+        <div class="lbl">연계 부처·기관</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">68<span>%</span></div>
+        <div class="lbl">템플릿 활용 선정률</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">D-2<span>기준</span></div>
+        <div class="lbl">선정 집단 평균 제출일</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content-wrap">
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <div class="section-label">템플릿 검색</div>
+    <div class="section-title">어떤 공모사업에 신청하시나요?</div>
+    <div class="search-grid">
+      <div class="form-group">
+        <label class="form-label">주관 부처</label>
+        <select class="form-select" id="selMinistry">
+          <option value="">전체 부처 선택</option>
+          <option>문화체육관광부</option>
+          <option>보건복지부</option>
+          <option>중소벤처기업부</option>
+          <option>교육부</option>
+          <option>환경부</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">사업 분야</label>
+        <select class="form-select" id="selCategory">
+          <option value="">전체 분야</option>
+          <option>문화·예술</option>
+          <option>사회복지</option>
+          <option>창업·벤처</option>
+          <option>교육·청소년</option>
+          <option>환경·에너지</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">키워드 검색</label>
+        <input class="form-input" type="text" placeholder="사업명 또는 키워드 입력" id="searchInput">
+      </div>
+      <button class="search-btn" onclick="doSearch()">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M20 20l-3-3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        검색
+      </button>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-row">
+    <button class="filter-tab active" onclick="setFilter(this,'all')">전체</button>
+    <button class="filter-tab" onclick="setFilter(this,'mcst')">문화체육관광부</button>
+    <button class="filter-tab" onclick="setFilter(this,'mhw')">보건복지부</button>
+    <button class="filter-tab" onclick="setFilter(this,'mss')">중소벤처기업부</button>
+    <button class="filter-tab" onclick="setFilter(this,'best')">⭐ 우수 템플릿</button>
+    <div class="result-count">총 <strong>6개</strong> 템플릿</div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards-grid">
+
+    <div class="tpl-card featured" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#e8eef9;">🎭</div>
+        <div class="card-meta">
+          <div class="card-ministry">문화체육관광부</div>
+          <div class="card-title">지역문화예술 활성화 사업</div>
+        </div>
+        <span class="featured-badge">우수</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">지역 문화예술 기반 강화 및 주민 참여 프로그램 운영을 위한 공모사업 신청서 템플릿. 5년 연속 선정 기관 사례 기반.</p>
+        <div class="card-tags">
+          <span class="tag">문화·예술</span>
+          <span class="tag green">선정률 72%</span>
+          <span class="tag amber">D-2 제출 권장</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.8★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">1,240</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.4일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+    <div class="tpl-card" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#e8f5ee;">🏃</div>
+        <div class="card-meta">
+          <div class="card-ministry">문화체육관광부</div>
+          <div class="card-title">생활체육 진흥 지원사업</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">지역 주민의 생활체육 참여 기반을 마련하고 생활체육 지도자 양성을 포함하는 종합 지원 사업 신청서 양식.</p>
+        <div class="card-tags">
+          <span class="tag">체육·건강</span>
+          <span class="tag green">선정률 65%</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.5★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">892</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.2일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+    <div class="tpl-card" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#fff8e6;">💊</div>
+        <div class="card-meta">
+          <div class="card-ministry">보건복지부</div>
+          <div class="card-title">지역사회 돌봄 통합지원</div>
+        </div>
+        <span class="featured-badge">우수</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">노인·장애인·아동 등 취약계층 대상 지역사회 통합돌봄 서비스 제공 기관을 위한 공모 신청서.</p>
+        <div class="card-tags">
+          <span class="tag">사회복지</span>
+          <span class="tag green">선정률 69%</span>
+          <span class="tag amber">D-3 제출 권장</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.7★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">1,087</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.9일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+    <div class="tpl-card" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#fbeaf0;">👶</div>
+        <div class="card-meta">
+          <div class="card-ministry">보건복지부</div>
+          <div class="card-title">아동 복지서비스 확충사업</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">아동 대상 맞춤형 복지서비스 확충 및 가정 내 양육 지원을 위한 지역형 사업 공모 신청 양식.</p>
+        <div class="card-tags">
+          <span class="tag">아동·가족</span>
+          <span class="tag green">선정률 61%</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.3★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">654</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.7일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+    <div class="tpl-card" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#eaf3de;">🚀</div>
+        <div class="card-meta">
+          <div class="card-ministry">중소벤처기업부</div>
+          <div class="card-title">초기 창업패키지 지원사업</div>
+        </div>
+        <span class="featured-badge">우수</span>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">창업 7년 이내 혁신 기술 기반 초기 창업기업 대상 사업화 자금 및 멘토링 지원을 위한 신청서 템플릿.</p>
+        <div class="card-tags">
+          <span class="tag">창업·기술</span>
+          <span class="tag green">선정률 58%</span>
+          <span class="tag amber">D-2 제출 권장</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.6★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">2,180</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.3일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+    <div class="tpl-card" onclick="openModal('mcst1')">
+      <div class="card-header">
+        <div class="card-icon" style="background:#e8eef9;">🏭</div>
+        <div class="card-meta">
+          <div class="card-ministry">중소벤처기업부</div>
+          <div class="card-title">소상공인 디지털 전환 지원</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">소상공인 대상 디지털 전환(DX) 역량 강화 및 스마트 시스템 도입비 지원 공모 신청서 양식.</p>
+        <div class="card-tags">
+          <span class="tag">소상공인</span>
+          <span class="tag green">선정률 54%</span>
+        </div>
+        <div class="card-metrics">
+          <div class="metric-box"><div class="val">4.2★</div><div class="lbl">활용 평점</div></div>
+          <div class="metric-box"><div class="val">743</div><div class="lbl">다운로드</div></div>
+          <div class="metric-box"><div class="val">2.1일</div><div class="lbl">평균 선행성</div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn-outline" onclick="event.stopPropagation(); showToast('미리보기를 열었습니다.')">미리보기</button>
+        <button class="btn-primary-sm" onclick="event.stopPropagation(); openModal('mcst1')">템플릿 열기</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOW TO USE -->
+  <section class="guide-section">
+    <div class="section-label">이용 방법</div>
+    <div class="section-title">4단계로 공모 신청 완성하기</div>
+    <div class="guide-grid">
+      <div class="guide-step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🔍</div>
+        <div class="step-title">템플릿 검색</div>
+        <div class="step-desc">부처·분야·키워드로 맞는 템플릿을 찾으세요</div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">항목 작성</div>
+        <div class="step-desc">각 항목별 가이드와 팁을 참고해 내용을 채우세요</div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">3</div>
+        <div class="step-icon">✅</div>
+        <div class="step-title">체크리스트 확인</div>
+        <div class="step-desc">선정 집단 기준 체크리스트로 완성도를 점검하세요</div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">4</div>
+        <div class="step-icon">🚀</div>
+        <div class="step-title">D-2 이전 제출</div>
+        <div class="step-desc">선정 집단 평균인 마감 2일 전 제출로 완성</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="mainModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-badge">문화체육관광부 · 우수 선정 템플릿</div>
+      <div class="modal-title">지역문화예술 활성화 사업 공모 신청서</div>
+      <div class="modal-subtitle">선정 집단 72% 활용 · 데이터 기반 작성 가이드 포함 · 마감 D-2 제출 권장</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="info-strip">
+        <div class="info-item"><div class="i-val">72%</div><div class="i-lbl">템플릿 활용 선정률</div></div>
+        <div class="info-item"><div class="i-val">D-2.4</div><div class="i-lbl">선정 집단 평균 제출일</div></div>
+        <div class="info-item"><div class="i-val">1.1일</div><div class="i-lbl">선정자 평균 작성 소요</div></div>
+        <div class="info-item"><div class="i-val">4.8★</div><div class="i-lbl">사용자 평점</div></div>
+      </div>
+
+      <!-- 배점 기준 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">📊</span>배점 기준 안내 (심사 항목)</div>
+        <table class="score-table">
+          <thead>
+            <tr><th style="width:40%">심사 항목</th><th style="width:15%">배점</th><th>선정 집단 핵심 포인트</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>사업 목적 및 필요성</td>
+              <td><span class="score-pill">20점</span></td>
+              <td>지역 현황 통계 수치 반드시 포함 (예: ○○시 문화시설 수, 1인당 문화향유 시간)</td>
+            </tr>
+            <tr>
+              <td>사업 내용 및 추진 방법</td>
+              <td><span class="score-pill">30점</span></td>
+              <td>단계별 일정표 + 추진 체계도 이미지 포함 시 가점</td>
+            </tr>
+            <tr>
+              <td>기관 역량 및 전문성</td>
+              <td><span class="score-pill">20점</span></td>
+              <td>유사 사업 수행 실적 3건 이상, 담당 인력 자격증 명시</td>
+            </tr>
+            <tr>
+              <td>예산 적정성</td>
+              <td><span class="score-pill">20점</span></td>
+              <td>항목별 산출 근거 필수, 유사 사례 비교 금액 제시</td>
+            </tr>
+            <tr>
+              <td>기대효과 및 지속가능성</td>
+              <td><span class="score-pill">10점</span></td>
+              <td>수혜 인원 수치화, 사업 종료 후 자립 방안 포함</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 섹션 1 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">1</span>사업 목적 및 필요성</div>
+        <div class="tip-box">
+          <strong>💡 선정 팁:</strong> 지역 통계 수치를 첫 문장에 배치하면 심사위원의 주목도가 높아집니다.
+          "○○시 문화예술 참여율 XX%(전국 평균 대비 YY% 낮음)"처럼 구체적 근거로 시작하세요.
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 지역 현황 및 문제 제기</div>
+          <textarea class="tpl-field-input" rows="4" placeholder="예시: ○○시의 2024년 문화예술 참여율은 42.3%로 전국 평균(58.7%) 대비 현저히 낮으며, 특히 읍·면 지역의 경우 문화시설 접근성 부족으로 주민의 문화 향유 기회가 제한되어 있습니다."></textarea>
+          <div class="tpl-field-hint">권장 분량: 200~300자 / 통계 출처 각주 필수</div>
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 사업의 필요성 및 기대 변화</div>
+          <textarea class="tpl-field-input" rows="3" placeholder="예시: 본 사업을 통해 지역 문화예술 공간을 연간 12회 이상 활성화하고, 주민 참여 프로그램 수강자 수를 500명 이상으로 확대하여 지역 문화 향유율을 5%p 이상 제고할 것으로 기대합니다."></textarea>
+          <div class="tpl-field-hint">수혜 대상 인원, 기대 수치 변화를 반드시 명시</div>
+        </div>
+      </div>
+
+      <!-- 섹션 2 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">2</span>사업 내용 및 추진 방법</div>
+        <div class="tip-box">
+          <strong>💡 선정 팁:</strong> 이 항목이 30점으로 배점이 가장 높습니다. 추진 일정을 월별로 분해하고,
+          파트너 기관·협력 방식을 명확히 기술한 신청서가 선정 집단에서 월등히 많습니다.
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 세부 사업 내용 (항목별 기술)</div>
+          <textarea class="tpl-field-input" rows="5" placeholder="[프로그램 1] 지역 문화예술 거점 공간 운영
+- 대상: 지역 주민 전체 (주 타겟: 40~60대 여성)
+- 내용: 도자기·수채화·사진 등 생활문화 강좌 월 4회 운영
+- 장소: ○○문화센터 2층 다목적실 (정원 30명)
+- 예상 수혜 인원: 연간 360명"></textarea>
+          <div class="tpl-field-hint">프로그램별로 구분하여 대상·내용·장소·인원을 각각 명시</div>
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 추진 일정 (분기별)</div>
+          <textarea class="tpl-field-input" rows="4" placeholder="1분기(1~3월): 사업 준비 — 강사 섭외, 공간 확보, 수강생 모집 공고
+2분기(4~6월): 본격 운영 — 프로그램 1·2 개강, 중간 성과 점검
+3분기(7~9월): 확대 운영 — 야외 문화행사 1회, 지역 축제 연계
+4분기(10~12월): 결산 및 성과 공유 — 결과 전시회, 사업 평가 보고서"></textarea>
+        </div>
+      </div>
+
+      <!-- 섹션 3 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">3</span>기관 역량 및 수행 체계</div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 유사 사업 수행 실적 (최근 3년)</div>
+          <textarea class="tpl-field-input" rows="4" placeholder="① 2023년 ○○부 '지역문화 진흥사업' 수행 — 예산 5,000만원, 수혜 280명
+② 2022년 ○○시 '생활문화 동아리 지원' — 예산 2,000만원, 동아리 15개 운영
+③ 2021년 ○○재단 '문화향유 확대사업' — 예산 3,500만원, 만족도 94%"></textarea>
+          <div class="tpl-field-hint">3건 이상 필수 / 사업명·연도·예산·성과를 표 형식으로 정리 권장</div>
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label">담당 인력 구성</div>
+          <textarea class="tpl-field-input" rows="3" placeholder="총괄책임자: ○○○ (문화예술교육사 1급, 경력 12년)
+사업담당자: ○○○ (사회복지사 2급, 경력 5년)
+보조인력: ○○○ (대학원생, 문화기획 전공)"></textarea>
+        </div>
+      </div>
+
+      <!-- 섹션 4 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">4</span>예산 계획</div>
+        <div class="tip-box">
+          <strong>💡 선정 팁:</strong> 예산 항목별로 "왜 이 금액인지" 산출 근거를 반드시 기재하세요.
+          "강사료 1인 × 4시간 × 월 4회 × 12개월 × 50,000원/시간 = 9,600,000원" 형식이 선정 집단의 공통 패턴입니다.
+        </div>
+        <div class="tpl-field">
+          <div class="tpl-field-label"><span class="required-mark">*</span> 예산 항목별 산출 근거</div>
+          <textarea class="tpl-field-input" rows="6" placeholder="[인건비] 강사료: 1인 × 4시간 × 월4회 × 12개월 × 50,000원 = 9,600,000원
+[운영비] 재료비: 수강생 30명 × 재료비 15,000원 × 12회 = 5,400,000원
+[홍보비] 현수막·리플렛: 현수막 10개×30,000원 + 리플렛 500부×800원 = 700,000원
+[행사비] 결과 전시회 운영: 공간임차 200,000원 + 다과 300,000원 = 500,000원
+--
+합계: 16,200,000원 (자부담 10%: 1,620,000원 / 보조금 신청: 14,580,000원)"></textarea>
+        </div>
+      </div>
+
+      <!-- 체크리스트 -->
+      <div class="template-section">
+        <div class="tpl-section-title"><span class="num">✅</span>제출 전 최종 체크리스트</div>
+        <ul class="checklist">
+          <li><span class="check-icon">✓</span>지역 현황 통계 수치가 최소 1개 이상 포함되어 있다</li>
+          <li><span class="check-icon">✓</span>수혜 인원이 구체적 숫자로 명시되어 있다 (예: "많은 시민" ✕ → "연 500명" ○)</li>
+          <li><span class="check-icon">✓</span>유사 사업 수행 실적이 3건 이상, 예산·성과 포함하여 기재되어 있다</li>
+          <li><span class="check-icon">✓</span>예산 항목별 산출 근거가 수식(수량×단가×기간) 형태로 작성되어 있다</li>
+          <li><span class="check-icon">✓</span>사업 종료 후 자립 또는 지속 운영 방안이 기재되어 있다</li>
+          <li><span class="check-icon">✓</span>신청서를 작성자 외 1인이 검토하였다</li>
+          <li><span class="check-icon">✓</span>마감일 기준 <strong>D-2 이전</strong>에 제출 예정이다 (선정 집단 평균: 마감 2.4일 전)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-lg outline" onclick="closeModal()">닫기</button>
+      <button class="btn-lg outline" onclick="showToast('워드 파일로 저장되었습니다.')">📄 워드 저장</button>
+      <button class="btn-lg accent" onclick="showToast('E나라도움 시스템으로 이동합니다.')">E나라도움 바로가기 →</button>
+      <button class="btn-lg solid" onclick="showToast('신청서 작성을 시작합니다.')">이 템플릿으로 작성하기</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer class="site-footer">
+  <strong>E나라도움 공모 신청서 템플릿 지원 시스템</strong><br>
+  본 서비스는 재정정보원 E나라도움 데이터를 기반으로 운영됩니다. · 공식 사이트: www.gosims.go.kr<br>
+  © 2025 한국재정정보원. 데이터 기반 공공서비스 혁신 플랫폼.
+</footer>
+
+<script>
+function openModal(id) {
+  document.getElementById('mainModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('mainModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function setFilter(btn, type) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+function doSearch() {
+  showToast('검색 중입니다...');
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = '✓  ' + msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
